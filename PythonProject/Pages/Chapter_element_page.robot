@@ -16,6 +16,14 @@ ${CHAPTER_SUBMIT_BUTTOM}  xpath=//section[@class='form-buttons']/button[@class='
 
 #*****Method to create *****
 Complete info on chapter Element
+    [Arguments]  ${title_text}  ${sub_title}  ${url_abreviation}  ${path_table_contents}  ${path_backgrounds_image}  ${path_of_overlay}
+    Set Info to Chapter Title   ${title_text}
+    Set Info to Chapter Sub Title  ${sub_title}
+    Set Abreviation of the URL  ${url_abreviation}
+    Set Path to table of Contents  ${path_table_contents}
+    Set Path to the Background Image  ${path_backgrounds_image}
+    Set Path to Overlay Image  ${path_of_overlay}
+    Click the Submit button
 
 
 #*****Set Methods and click methods*****

@@ -19,6 +19,8 @@ ${POST_DATA_TAG}  xpath=//div[@class='fuzzy-search']/div[@class='search-box']/in
 ${POST_DATA_TAG_RESULT}  xpath=//div[@class='fuzzy-search']/div[@class='search-results']/div[@class='result-item']
 
 *** Keywords ***
+#********Method to add information to post Data*******
+Add Info to Post Data element
 
 #**** Method to select category and subcategory****
 Select Category and SubCategory
