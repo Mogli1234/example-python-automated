@@ -2,10 +2,11 @@
 Resource  base_page.robot
 
 *** Variables ***
-${Username}  id =  identifierId
-${Password}  xpath = //input[@name='password']
-${LoginButton}  id = identifierNext
-${PasswordButton}  xpath = //div[@id='passwordNext' and @role='button']
+${Username}  id=identifierId
+${PasswordInput}  xpath=//input[@name='password']
+${LoginButton}  id=identifierNext
+${PasswordButton}  xpath=//div[@id='passwordNext' and @role='button']
+
 
 *** Keywords ***
 Login Method
@@ -16,7 +17,6 @@ Login Method
     Click on the passwordbutton
 
 
-
 #******Set methods and clicker button***************
 Set Email To Field
     [Arguments]  ${email}
@@ -24,7 +24,7 @@ Set Email To Field
 
 Set Password To Field
     [Arguments]  ${password}
-    Type On Input Field  ${Password}  ${password}
+    Type On Input Field  ${PasswordInput}  ${password}
 
 Click on the LoginButton
     Click On Element  ${LoginButton}

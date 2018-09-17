@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180914 13:17:06.561">
+<suite id="s1" name="Base Page" source="C:\Users\jesquivel-as\Documents\example-python-automated\PythonProject\ObjPage\base_page.robot">
+<test id="s1-t1" name="Go to Platform">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${APP_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180914 13:17:06.757" level="INFO">Opening browser 'chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
+<status status="PASS" starttime="20180914 13:17:06.757" endtime="20180914 13:17:11.537"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180914 13:17:13.319" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180914 13:17:12.699" endtime="20180914 13:17:13.319"></status>
+</kw>
+<msg timestamp="20180914 13:17:13.322" level="FAIL">WebDriverException: Message: unknown error: failed to change window state to maximized, current state is normal
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20180914 13:17:11.537" endtime="20180914 13:17:13.322"></status>
+</kw>
+<status status="FAIL" starttime="20180914 13:17:06.757" endtime="20180914 13:17:13.322" critical="yes">WebDriverException: Message: unknown error: failed to change window state to maximized, current state is normal
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<status status="FAIL" starttime="20180914 13:17:06.570" endtime="20180914 13:17:13.324"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Base Page">Base Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

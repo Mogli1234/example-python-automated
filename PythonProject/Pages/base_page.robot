@@ -20,9 +20,8 @@ Click On Element
 #******************************Method to setData to input field******************
 Type On Input Field
     [Arguments]  ${input_field}  ${value_text}
-    Wait Until Element is Enabled  ${input_field}
-    timeout =${TIME_OUT}
-    Clear Element Text ${input_field}
-    Input Text  ${input_field}  ${text}
+    Wait Until Element is Enabled  ${input_field}  timeout=${TIME_OUT}
+    Clear Element Text  ${input_field}
+    Input Text  ${input_field}  ${value_text}
 
 
