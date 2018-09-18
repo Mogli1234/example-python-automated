@@ -2,6 +2,7 @@
 Resource  base_page.robot
 Library  String
 Library  Selenium2Library
+
 *** Variables ***
 
 #*****Random number******
@@ -21,6 +22,14 @@ ${POST_DATA_TAG_RESULT}  xpath=//div[@class='fuzzy-search']/div[@class='search-r
 *** Keywords ***
 #********Method to add information to post Data*******
 Add Info to Post Data element
+[[Arguments]  ${title}  ${description}  ${path_of_mage}  ${tag}
+    Set Text to Title  ${title}
+    Set Text to Slug
+    Set Text to Description  ${description}
+    Set Path of Image to Upload  ${path_of_mage}
+    Select Category and SubCategory
+    Select Element on the Tag Field  ${tag}
+
 
 #**** Method to select category and subcategory****
 Select Category and SubCategory
