@@ -1,17 +1,20 @@
 *** Settings ***
 Resource   ../Pages/base_page.robot
-Resource   ../Pages/login_psge.robot
+Resource   ../Pages/login_page.robot
 Resource   ../Pages/editor_page.robot
 Resource   ../Pages/post_data_element_page.robot
 Resource   ../Pages/Chapter_element_page.robot
 Library    Selenium2Library
 Library     ../libraries/login_lib.py
 Library     ../libraries/chapter_lib.py
-Library     ../libraries/posdata_lib.py
+Library     ../libraries/postdata_lib.py
 
 Test Setup  Go to Platform
-Suite Teardown  Close all Browsers
+
 *** Variables ***
+#****Login Variables*******
+${EMAIL}
+${PASSWORD}
 
 #*******PostData element*****
 ${PostDataTitle}
@@ -52,6 +55,7 @@ Set Email and Password
 #*****Test Case to Create a new Info Guide post Type with a chapter element*******
 *** Test Cases ***
 Log in and Create Guide Article
+
     Set Email and Password
     Login Method  ${EMAIL}  ${PASSWORD}
     Create Guide Element
