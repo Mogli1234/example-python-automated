@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180918 17:00:46.020">
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180918 17:22:20.406">
 <suite id="s1" name="PostGuide Chapter test" source="C:\Users\Kimy\Documents\Mogli\example-python-automated\PythonProject\Test\PostGuide_Chapter_test.robot">
 <test id="s1-t1" name="Log in and Create Guide Article">
 <kw name="Go to Platform" library="base_page" type="setup">
@@ -9,23 +9,134 @@
 <arg>${APP_URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180918 17:00:46.361" level="INFO">Opening browser 'Chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
+<msg timestamp="20180918 17:22:20.758" level="INFO">Opening browser 'Chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
+<status status="PASS" starttime="20180918 17:22:20.758" endtime="20180918 17:22:26.028"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.9</arg>
+</arguments>
+<status status="PASS" starttime="20180918 17:22:26.028" endtime="20180918 17:22:26.029"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:20.757" endtime="20180918 17:22:26.029"></status>
+</kw>
+<kw name="Set Email and Password">
+<kw name="Get Email" library="login_lib">
+<assign>
+<var>${EMAIL}</var>
+</assign>
+<msg timestamp="20180918 17:22:26.030" level="INFO">${EMAIL} = paloma1@brit.co</msg>
+<status status="PASS" starttime="20180918 17:22:26.030" endtime="20180918 17:22:26.031"></status>
+</kw>
+<kw name="Get Password" library="login_lib">
+<assign>
+<var>${PASSWORD}</var>
+</assign>
+<msg timestamp="20180918 17:22:26.031" level="INFO">${PASSWORD} = !p4l0m4!</msg>
+<status status="PASS" starttime="20180918 17:22:26.031" endtime="20180918 17:22:26.031"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:26.030" endtime="20180918 17:22:26.032"></status>
+</kw>
+<kw name="Login Method" library="login_page">
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw name="Set Email To Field" library="login_page">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Type On Input Field" library="base_page">
+<arguments>
+<arg>${Username}</arg>
+<arg>${email}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180918 17:22:26.038" endtime="20180918 17:22:31.511"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+</arguments>
+<status status="PASS" starttime="20180918 17:22:31.511" endtime="20180918 17:22:33.365"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>${value_text}</arg>
+</arguments>
+<msg timestamp="20180918 17:22:33.366" level="INFO">Typing text '' into text field 'id=identifierId'.</msg>
+<status status="PASS" starttime="20180918 17:22:33.365" endtime="20180918 17:22:36.141"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:26.037" endtime="20180918 17:22:36.141"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:26.036" endtime="20180918 17:22:36.141"></status>
+</kw>
+<kw name="Click on the LoginButton" library="login_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${LoginButton}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180918 17:22:36.142" endtime="20180918 17:22:38.890"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180918 17:22:38.890" level="INFO">Clicking element 'id=identifierNext'.</msg>
+<status status="PASS" starttime="20180918 17:22:38.890" endtime="20180918 17:22:40.804"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:36.142" endtime="20180918 17:22:40.804"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:36.141" endtime="20180918 17:22:40.804"></status>
+</kw>
+<kw name="Set Password To Field" library="login_page">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Type On Input Field" library="base_page">
+<arguments>
+<arg>${PasswordInput}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180918 17:00:46.367" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" starttime="20180918 17:00:46.367" endtime="20180918 17:00:46.367"></status>
+<msg timestamp="20180918 17:22:57.604" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180918 17:22:56.385" endtime="20180918 17:22:57.605"></status>
 </kw>
-<msg timestamp="20180918 17:00:46.373" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-</msg>
-<status status="FAIL" starttime="20180918 17:00:46.361" endtime="20180918 17:00:46.373"></status>
+<msg timestamp="20180918 17:22:57.607" level="FAIL">Element with locator 'xpath=//input[@name='password']' not found.</msg>
+<status status="FAIL" starttime="20180918 17:22:40.806" endtime="20180918 17:22:57.607"></status>
 </kw>
-<status status="FAIL" starttime="20180918 17:00:46.360" endtime="20180918 17:00:46.373"></status>
+<status status="FAIL" starttime="20180918 17:22:40.805" endtime="20180918 17:22:57.607"></status>
 </kw>
-<status status="FAIL" starttime="20180918 17:00:46.359" endtime="20180918 17:00:46.374" critical="yes">Setup failed:
-WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-</status>
+<status status="FAIL" starttime="20180918 17:22:40.804" endtime="20180918 17:22:57.608"></status>
+</kw>
+<status status="FAIL" starttime="20180918 17:22:26.035" endtime="20180918 17:22:57.608"></status>
+</kw>
+<status status="FAIL" starttime="20180918 17:22:20.756" endtime="20180918 17:22:57.608" critical="yes">Element with locator 'xpath=//input[@name='password']' not found.</status>
 </test>
-<status status="FAIL" starttime="20180918 17:00:46.023" endtime="20180918 17:00:46.376"></status>
+<status status="FAIL" starttime="20180918 17:22:20.409" endtime="20180918 17:22:57.610"></status>
 </suite>
 <statistics>
 <total>
