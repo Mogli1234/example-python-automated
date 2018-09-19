@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180914 16:04:10.405">
-<suite id="s1" name="Login Test" source="C:\Users\jesquivel-as\Documents\example-python-automated\PythonProject\Test\login_test.robot">
-<test id="s1-t1" name="Login Correctly">
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180918 17:22:20.406">
+<suite id="s1" name="PostGuide Chapter test" source="C:\Users\Kimy\Documents\Mogli\example-python-automated\PythonProject\Test\PostGuide_Chapter_test.robot">
+<test id="s1-t1" name="Log in and Create Guide Article">
 <kw name="Go to Platform" library="base_page" type="setup">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -9,36 +9,39 @@
 <arg>${APP_URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180914 16:04:10.575" level="INFO">Opening browser 'Chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
-<status status="PASS" starttime="20180914 16:04:10.575" endtime="20180914 16:04:14.849"></status>
+<msg timestamp="20180918 17:22:20.758" level="INFO">Opening browser 'Chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
+<status status="PASS" starttime="20180918 17:22:20.758" endtime="20180918 17:22:26.028"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
 <arg>0.9</arg>
 </arguments>
-<status status="PASS" starttime="20180914 16:04:14.849" endtime="20180914 16:04:14.850"></status>
+<status status="PASS" starttime="20180918 17:22:26.028" endtime="20180918 17:22:26.029"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:10.575" endtime="20180914 16:04:14.850"></status>
+<status status="PASS" starttime="20180918 17:22:20.757" endtime="20180918 17:22:26.029"></status>
 </kw>
+<kw name="Set Email and Password">
 <kw name="Get Email" library="login_lib">
 <assign>
 <var>${EMAIL}</var>
 </assign>
-<msg timestamp="20180914 16:04:14.850" level="INFO">${EMAIL} = paloma1@brit.co</msg>
-<status status="PASS" starttime="20180914 16:04:14.850" endtime="20180914 16:04:14.851"></status>
+<msg timestamp="20180918 17:22:26.030" level="INFO">${EMAIL} = paloma1@brit.co</msg>
+<status status="PASS" starttime="20180918 17:22:26.030" endtime="20180918 17:22:26.031"></status>
 </kw>
 <kw name="Get Password" library="login_lib">
 <assign>
-<var>${PASS}</var>
+<var>${PASSWORD}</var>
 </assign>
-<msg timestamp="20180914 16:04:14.851" level="INFO">${PASS} = !p4l0m4!</msg>
-<status status="PASS" starttime="20180914 16:04:14.851" endtime="20180914 16:04:14.851"></status>
+<msg timestamp="20180918 17:22:26.031" level="INFO">${PASSWORD} = !p4l0m4!</msg>
+<status status="PASS" starttime="20180918 17:22:26.031" endtime="20180918 17:22:26.031"></status>
+</kw>
+<status status="PASS" starttime="20180918 17:22:26.030" endtime="20180918 17:22:26.032"></status>
 </kw>
 <kw name="Login Method" library="login_page">
 <arguments>
 <arg>${EMAIL}</arg>
-<arg>${PASS}</arg>
+<arg>${PASSWORD}</arg>
 </arguments>
 <kw name="Set Email To Field" library="login_page">
 <arguments>
@@ -55,14 +58,14 @@
 <arg>${input_field}</arg>
 <arg>timeout=${TIME_OUT}</arg>
 </arguments>
-<status status="PASS" starttime="20180914 16:04:14.852" endtime="20180914 16:04:19.895"></status>
+<status status="PASS" starttime="20180918 17:22:26.038" endtime="20180918 17:22:31.511"></status>
 </kw>
 <kw name="Clear Element Text" library="Selenium2Library">
 <doc>Clears the value of text entry element identified by ``locator``.</doc>
 <arguments>
 <arg>${input_field}</arg>
 </arguments>
-<status status="PASS" starttime="20180914 16:04:19.895" endtime="20180914 16:04:21.715"></status>
+<status status="PASS" starttime="20180918 17:22:31.511" endtime="20180918 17:22:33.365"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -70,12 +73,12 @@
 <arg>${input_field}</arg>
 <arg>${value_text}</arg>
 </arguments>
-<msg timestamp="20180914 16:04:21.715" level="INFO">Typing text 'paloma1@brit.co' into text field 'id=identifierId'.</msg>
-<status status="PASS" starttime="20180914 16:04:21.715" endtime="20180914 16:04:24.524"></status>
+<msg timestamp="20180918 17:22:33.366" level="INFO">Typing text '' into text field 'id=identifierId'.</msg>
+<status status="PASS" starttime="20180918 17:22:33.365" endtime="20180918 17:22:36.141"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:14.852" endtime="20180914 16:04:24.524"></status>
+<status status="PASS" starttime="20180918 17:22:26.037" endtime="20180918 17:22:36.141"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:14.852" endtime="20180914 16:04:24.524"></status>
+<status status="PASS" starttime="20180918 17:22:26.036" endtime="20180918 17:22:36.141"></status>
 </kw>
 <kw name="Click on the LoginButton" library="login_page">
 <kw name="Click On Element" library="base_page">
@@ -88,19 +91,19 @@
 <arg>${element}</arg>
 <arg>timeout=${TIME_OUT}</arg>
 </arguments>
-<status status="PASS" starttime="20180914 16:04:24.524" endtime="20180914 16:04:27.277"></status>
+<status status="PASS" starttime="20180918 17:22:36.142" endtime="20180918 17:22:38.890"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${element}</arg>
 </arguments>
-<msg timestamp="20180914 16:04:27.277" level="INFO">Clicking element 'id=identifierNext'.</msg>
-<status status="PASS" starttime="20180914 16:04:27.277" endtime="20180914 16:04:29.217"></status>
+<msg timestamp="20180918 17:22:38.890" level="INFO">Clicking element 'id=identifierNext'.</msg>
+<status status="PASS" starttime="20180918 17:22:38.890" endtime="20180918 17:22:40.804"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:24.524" endtime="20180914 16:04:29.217"></status>
+<status status="PASS" starttime="20180918 17:22:36.142" endtime="20180918 17:22:40.804"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:24.524" endtime="20180914 16:04:29.218"></status>
+<status status="PASS" starttime="20180918 17:22:36.141" endtime="20180918 17:22:40.804"></status>
 </kw>
 <kw name="Set Password To Field" library="login_page">
 <arguments>
@@ -117,72 +120,33 @@
 <arg>${input_field}</arg>
 <arg>timeout=${TIME_OUT}</arg>
 </arguments>
-<status status="PASS" starttime="20180914 16:04:29.220" endtime="20180914 16:04:31.959"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180918 17:22:57.604" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180918 17:22:56.385" endtime="20180918 17:22:57.605"></status>
 </kw>
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the value of text entry element identified by ``locator``.</doc>
-<arguments>
-<arg>${input_field}</arg>
-</arguments>
-<status status="PASS" starttime="20180914 16:04:31.959" endtime="20180914 16:04:33.797"></status>
+<msg timestamp="20180918 17:22:57.607" level="FAIL">Element with locator 'xpath=//input[@name='password']' not found.</msg>
+<status status="FAIL" starttime="20180918 17:22:40.806" endtime="20180918 17:22:57.607"></status>
 </kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${input_field}</arg>
-<arg>${value_text}</arg>
-</arguments>
-<msg timestamp="20180914 16:04:33.797" level="INFO">Typing text '!p4l0m4!' into text field 'xpath=//input[@name='password']'.</msg>
-<status status="PASS" starttime="20180914 16:04:33.797" endtime="20180914 16:04:36.588"></status>
+<status status="FAIL" starttime="20180918 17:22:40.805" endtime="20180918 17:22:57.607"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:29.219" endtime="20180914 16:04:36.588"></status>
+<status status="FAIL" starttime="20180918 17:22:40.804" endtime="20180918 17:22:57.608"></status>
 </kw>
-<status status="PASS" starttime="20180914 16:04:29.218" endtime="20180914 16:04:36.588"></status>
+<status status="FAIL" starttime="20180918 17:22:26.035" endtime="20180918 17:22:57.608"></status>
 </kw>
-<kw name="Click on the PasswordButton" library="login_page">
-<kw name="Click On Element" library="base_page">
-<arguments>
-<arg>${PasswordButton}</arg>
-</arguments>
-<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${element}</arg>
-<arg>timeout=${TIME_OUT}</arg>
-</arguments>
-<status status="PASS" starttime="20180914 16:04:36.588" endtime="20180914 16:04:39.364"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${element}</arg>
-</arguments>
-<msg timestamp="20180914 16:04:39.364" level="INFO">Clicking element 'xpath=//div[@id='passwordNext' and @role='button']'.</msg>
-<status status="PASS" starttime="20180914 16:04:39.364" endtime="20180914 16:04:41.241"></status>
-</kw>
-<status status="PASS" starttime="20180914 16:04:36.588" endtime="20180914 16:04:41.241"></status>
-</kw>
-<status status="PASS" starttime="20180914 16:04:36.588" endtime="20180914 16:04:41.242"></status>
-</kw>
-<status status="PASS" starttime="20180914 16:04:14.852" endtime="20180914 16:04:41.242"></status>
-</kw>
-<status status="PASS" starttime="20180914 16:04:10.559" endtime="20180914 16:04:41.243" critical="yes"></status>
+<status status="FAIL" starttime="20180918 17:22:20.756" endtime="20180918 17:22:57.608" critical="yes">Element with locator 'xpath=//input[@name='password']' not found.</status>
 </test>
-<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20180914 16:04:41.248" endtime="20180914 16:04:44.208"></status>
-</kw>
-<status status="PASS" starttime="20180914 16:04:10.405" endtime="20180914 16:04:44.208"></status>
+<status status="FAIL" starttime="20180918 17:22:20.409" endtime="20180918 17:22:57.610"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Login Test">Login Test</stat>
+<stat pass="0" fail="1" id="s1" name="PostGuide Chapter test">PostGuide Chapter test</stat>
 </suite>
 </statistics>
 <errors>
