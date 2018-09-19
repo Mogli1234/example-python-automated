@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180918 17:22:20.406">
-<suite id="s1" name="PostGuide Chapter test" source="C:\Users\Kimy\Documents\Mogli\example-python-automated\PythonProject\Test\PostGuide_Chapter_test.robot">
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180919 15:26:58.078">
+<suite id="s1" name="PostGuide Chapter test" source="C:\Users\jesquivel-as\Documents\example-python-automated\PythonProject\Test\PostGuide_Chapter_test.robot">
 <test id="s1-t1" name="Log in and Create Guide Article">
 <kw name="Go to Platform" library="base_page" type="setup">
 <kw name="Open Browser" library="Selenium2Library">
@@ -9,34 +9,31 @@
 <arg>${APP_URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180918 17:22:20.758" level="INFO">Opening browser 'Chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
-<status status="PASS" starttime="20180918 17:22:20.758" endtime="20180918 17:22:26.028"></status>
+<msg timestamp="20180919 15:26:58.277" level="INFO">Opening browser 'Chrome' to base url 'https://paloma-qa.brit.co/posts/editor/'.</msg>
+<status status="PASS" starttime="20180919 15:26:58.276" endtime="20180919 15:27:02.963"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>0.9</arg>
+<arg>0.1</arg>
 </arguments>
-<status status="PASS" starttime="20180918 17:22:26.028" endtime="20180918 17:22:26.029"></status>
+<status status="PASS" starttime="20180919 15:27:02.963" endtime="20180919 15:27:02.963"></status>
 </kw>
-<status status="PASS" starttime="20180918 17:22:20.757" endtime="20180918 17:22:26.029"></status>
+<status status="PASS" starttime="20180919 15:26:58.276" endtime="20180919 15:27:02.963"></status>
 </kw>
-<kw name="Set Email and Password">
 <kw name="Get Email" library="login_lib">
 <assign>
 <var>${EMAIL}</var>
 </assign>
-<msg timestamp="20180918 17:22:26.030" level="INFO">${EMAIL} = paloma1@brit.co</msg>
-<status status="PASS" starttime="20180918 17:22:26.030" endtime="20180918 17:22:26.031"></status>
+<msg timestamp="20180919 15:27:02.964" level="INFO">${EMAIL} = paloma1@brit.co</msg>
+<status status="PASS" starttime="20180919 15:27:02.964" endtime="20180919 15:27:02.964"></status>
 </kw>
 <kw name="Get Password" library="login_lib">
 <assign>
 <var>${PASSWORD}</var>
 </assign>
-<msg timestamp="20180918 17:22:26.031" level="INFO">${PASSWORD} = !p4l0m4!</msg>
-<status status="PASS" starttime="20180918 17:22:26.031" endtime="20180918 17:22:26.031"></status>
-</kw>
-<status status="PASS" starttime="20180918 17:22:26.030" endtime="20180918 17:22:26.032"></status>
+<msg timestamp="20180919 15:27:02.965" level="INFO">${PASSWORD} = !p4l0m4!</msg>
+<status status="PASS" starttime="20180919 15:27:02.964" endtime="20180919 15:27:02.965"></status>
 </kw>
 <kw name="Login Method" library="login_page">
 <arguments>
@@ -58,14 +55,14 @@
 <arg>${input_field}</arg>
 <arg>timeout=${TIME_OUT}</arg>
 </arguments>
-<status status="PASS" starttime="20180918 17:22:26.038" endtime="20180918 17:22:31.511"></status>
+<status status="PASS" starttime="20180919 15:27:02.967" endtime="20180919 15:27:04.733"></status>
 </kw>
 <kw name="Clear Element Text" library="Selenium2Library">
 <doc>Clears the value of text entry element identified by ``locator``.</doc>
 <arguments>
 <arg>${input_field}</arg>
 </arguments>
-<status status="PASS" starttime="20180918 17:22:31.511" endtime="20180918 17:22:33.365"></status>
+<status status="PASS" starttime="20180919 15:27:04.733" endtime="20180919 15:27:04.963"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -73,12 +70,12 @@
 <arg>${input_field}</arg>
 <arg>${value_text}</arg>
 </arguments>
-<msg timestamp="20180918 17:22:33.366" level="INFO">Typing text '' into text field 'id=identifierId'.</msg>
-<status status="PASS" starttime="20180918 17:22:33.365" endtime="20180918 17:22:36.141"></status>
+<msg timestamp="20180919 15:27:04.963" level="INFO">Typing text 'paloma1@brit.co' into text field 'id=identifierId'.</msg>
+<status status="PASS" starttime="20180919 15:27:04.963" endtime="20180919 15:27:05.376"></status>
 </kw>
-<status status="PASS" starttime="20180918 17:22:26.037" endtime="20180918 17:22:36.141"></status>
+<status status="PASS" starttime="20180919 15:27:02.966" endtime="20180919 15:27:05.376"></status>
 </kw>
-<status status="PASS" starttime="20180918 17:22:26.036" endtime="20180918 17:22:36.141"></status>
+<status status="PASS" starttime="20180919 15:27:02.966" endtime="20180919 15:27:05.376"></status>
 </kw>
 <kw name="Click on the LoginButton" library="login_page">
 <kw name="Click On Element" library="base_page">
@@ -91,19 +88,19 @@
 <arg>${element}</arg>
 <arg>timeout=${TIME_OUT}</arg>
 </arguments>
-<status status="PASS" starttime="20180918 17:22:36.142" endtime="20180918 17:22:38.890"></status>
+<status status="PASS" starttime="20180919 15:27:05.377" endtime="20180919 15:27:05.707"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${element}</arg>
 </arguments>
-<msg timestamp="20180918 17:22:38.890" level="INFO">Clicking element 'id=identifierNext'.</msg>
-<status status="PASS" starttime="20180918 17:22:38.890" endtime="20180918 17:22:40.804"></status>
+<msg timestamp="20180919 15:27:05.707" level="INFO">Clicking element 'id=identifierNext'.</msg>
+<status status="PASS" starttime="20180919 15:27:05.707" endtime="20180919 15:27:05.993"></status>
 </kw>
-<status status="PASS" starttime="20180918 17:22:36.142" endtime="20180918 17:22:40.804"></status>
+<status status="PASS" starttime="20180919 15:27:05.376" endtime="20180919 15:27:05.993"></status>
 </kw>
-<status status="PASS" starttime="20180918 17:22:36.141" endtime="20180918 17:22:40.804"></status>
+<status status="PASS" starttime="20180919 15:27:05.376" endtime="20180919 15:27:05.993"></status>
 </kw>
 <kw name="Set Password To Field" library="login_page">
 <arguments>
@@ -120,23 +117,509 @@
 <arg>${input_field}</arg>
 <arg>timeout=${TIME_OUT}</arg>
 </arguments>
+<status status="PASS" starttime="20180919 15:27:05.994" endtime="20180919 15:27:06.956"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:06.956" endtime="20180919 15:27:07.195"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>${value_text}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:07.195" level="INFO">Typing text '!p4l0m4!' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" starttime="20180919 15:27:07.195" endtime="20180919 15:27:07.581"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:05.993" endtime="20180919 15:27:07.581"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:05.993" endtime="20180919 15:27:07.582"></status>
+</kw>
+<kw name="Click on the PasswordButton" library="login_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${PasswordButton}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:07.584" endtime="20180919 15:27:07.951"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:07.952" level="INFO">Clicking element 'xpath=//div[@id='passwordNext' and @role='button']'.</msg>
+<status status="PASS" starttime="20180919 15:27:07.951" endtime="20180919 15:27:08.239"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:07.583" endtime="20180919 15:27:08.239"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:07.582" endtime="20180919 15:27:08.239"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:02.965" endtime="20180919 15:27:08.239"></status>
+</kw>
+<kw name="Create Guide Element" library="editor_page">
+<kw name="Click on Guide Option" library="editor_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${GUIDE_ELEMENT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:08.241" endtime="20180919 15:27:13.283"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:13.283" level="INFO">Clicking element 'xpath=//div[@class='post-format-type' and @data-post-module='2']'.</msg>
+<status status="PASS" starttime="20180919 15:27:13.283" endtime="20180919 15:27:13.556"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:08.240" endtime="20180919 15:27:13.556"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:08.240" endtime="20180919 15:27:13.556"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:08.240" endtime="20180919 15:27:13.556"></status>
+</kw>
+<kw name="Set All Post Data Elements">
+<kw name="Set Title PostData" library="postdata_lib">
+<assign>
+<var>${PostDataTitle}</var>
+</assign>
+<msg timestamp="20180919 15:27:13.557" level="INFO">${PostDataTitle} = Example_automated_test</msg>
+<status status="PASS" starttime="20180919 15:27:13.557" endtime="20180919 15:27:13.557"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${TITLE_GLOBAL}</arg>
+<arg>${PostDataTitle}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:13.558" level="INFO">${TITLE_GLOBAL} = Example_automated_test</msg>
+<status status="PASS" starttime="20180919 15:27:13.557" endtime="20180919 15:27:13.558"></status>
+</kw>
+<kw name="Set Description PostData" library="postdata_lib">
+<assign>
+<var>${PostDataDescription}</var>
+</assign>
+<msg timestamp="20180919 15:27:13.559" level="INFO">${PostDataDescription} = This a is example of text that we use to add a description</msg>
+<status status="PASS" starttime="20180919 15:27:13.558" endtime="20180919 15:27:13.559"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${DESCRIPTION_GLOBAL}</arg>
+<arg>${PostDataDescription}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:13.560" level="INFO">${DESCRIPTION_GLOBAL} = This a is example of text that we use to add a description</msg>
+<status status="PASS" starttime="20180919 15:27:13.559" endtime="20180919 15:27:13.560"></status>
+</kw>
+<kw name="Set Path Upload Image" library="postdata_lib">
+<assign>
+<var>${PostDataImagePath}</var>
+</assign>
+<msg timestamp="20180919 15:27:13.560" level="INFO">${PostDataImagePath} = C:\Users\jesquivel-as\IdeaProjects\Example_of_automatimate\src\assets\375578.jpg</msg>
+<status status="PASS" starttime="20180919 15:27:13.560" endtime="20180919 15:27:13.560"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PATHIMAGE_GLOBAL}</arg>
+<arg>${PostDataImagePath}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:13.561" level="INFO">${PATHIMAGE_GLOBAL} = C:\Users\jesquivel-as\IdeaProjects\Example_of_automatimate\src\assets\375578.jpg</msg>
+<status status="PASS" starttime="20180919 15:27:13.560" endtime="20180919 15:27:13.561"></status>
+</kw>
+<kw name="Set Tag" library="postdata_lib">
+<assign>
+<var>${PostDataTag}</var>
+</assign>
+<msg timestamp="20180919 15:27:13.562" level="INFO">${PostDataTag} = Hair Accesories</msg>
+<status status="PASS" starttime="20180919 15:27:13.561" endtime="20180919 15:27:13.562"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${TAG_GLOBAL}</arg>
+<arg>${PostDataTag}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:13.563" level="INFO">${TAG_GLOBAL} = Hair Accesories</msg>
+<status status="PASS" starttime="20180919 15:27:13.562" endtime="20180919 15:27:13.563"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:13.557" endtime="20180919 15:27:13.563"></status>
+</kw>
+<kw name="Add Info to Post Data element" library="post_data_element_page">
+<arguments>
+<arg>${TITLE_GLOBAL}</arg>
+<arg>${DESCRIPTION_GLOBAL}</arg>
+<arg>${PATHIMAGE_GLOBAL}</arg>
+<arg>${TAG_GLOBAL}</arg>
+</arguments>
+<kw name="Set Text to Slug" library="post_data_element_page">
+<kw name="Type On Input Field" library="base_page">
+<arguments>
+<arg>${POST_DATA_SLUG}</arg>
+<arg>${RANDOM_NUMBER}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:13.564" endtime="20180919 15:27:13.903"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:13.903" endtime="20180919 15:27:14.140"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>${value_text}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:14.140" level="INFO">Typing text 'Generate Random String 15 [LETTERS]' into text field 'name=slug'.</msg>
+<status status="PASS" starttime="20180919 15:27:14.140" endtime="20180919 15:27:14.804"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:13.564" endtime="20180919 15:27:14.804"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:13.564" endtime="20180919 15:27:14.805"></status>
+</kw>
+<kw name="Set Text to Description" library="post_data_element_page">
+<arguments>
+<arg>${description}</arg>
+</arguments>
+<kw name="Type On Input Field" library="base_page">
+<arguments>
+<arg>${POST_DATA_DESCRIPTION_FIELD}</arg>
+<arg>${description_text}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:14.807" endtime="20180919 15:27:15.164"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:15.164" endtime="20180919 15:27:15.395"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>${value_text}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:15.395" level="INFO">Typing text 'This a is example of text that we use to add a description' into text field '//textarea[@name='description']'.</msg>
+<status status="PASS" starttime="20180919 15:27:15.395" endtime="20180919 15:27:16.108"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:14.806" endtime="20180919 15:27:16.108"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:14.805" endtime="20180919 15:27:16.108"></status>
+</kw>
+<kw name="Set Path of Image to Upload" library="post_data_element_page">
+<arguments>
+<arg>${path_of_mage}</arg>
+</arguments>
+<kw name="Type On Input Image" library="base_page">
+<arguments>
+<arg>${POST_DATA_UPLOAD_IMAGE}</arg>
+<arg>${path_image}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:16.109" endtime="20180919 15:27:16.439"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>${path}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:16.439" endtime="20180919 15:27:16.687"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:16.109" endtime="20180919 15:27:16.687"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:16.108" endtime="20180919 15:27:16.687"></status>
+</kw>
+<kw name="Select Category and SubCategory" library="post_data_element_page">
+<kw name="Click on Category" library="post_data_element_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${POST_DATA_CATEGORY}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:16.688" endtime="20180919 15:27:17.045"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:17.045" level="INFO">Clicking element 'xpath=//select[@name='category']'.</msg>
+<status status="PASS" starttime="20180919 15:27:17.045" endtime="20180919 15:27:17.319"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:16.687" endtime="20180919 15:27:17.319"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:16.687" endtime="20180919 15:27:17.320"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${POST_DATA_CATEGORY}</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20180919 15:27:17.321" level="INFO">Selecting options from selection list 'xpath=//select[@name='category']' by value 4.</msg>
+<status status="PASS" starttime="20180919 15:27:17.320" endtime="20180919 15:27:18.172"></status>
+</kw>
+<kw name="Click on SubCategory" library="post_data_element_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${POST_DATA_SUBCATEGORY}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:18.173" endtime="20180919 15:27:18.503"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:18.504" level="INFO">Clicking element 'xpath=//select[@name='subcategory']'.</msg>
+<status status="PASS" starttime="20180919 15:27:18.503" endtime="20180919 15:27:18.822"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:18.172" endtime="20180919 15:27:18.822"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:18.172" endtime="20180919 15:27:18.822"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${POST_DATA_SUBCATEGORY}</arg>
+<arg>30</arg>
+</arguments>
+<msg timestamp="20180919 15:27:18.823" level="INFO">Selecting options from selection list 'xpath=//select[@name='subcategory']' by value 30.</msg>
+<status status="PASS" starttime="20180919 15:27:18.823" endtime="20180919 15:27:19.671"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:16.687" endtime="20180919 15:27:19.671"></status>
+</kw>
+<kw name="Select Element on the Tag Field" library="post_data_element_page">
+<arguments>
+<arg>${tag}</arg>
+</arguments>
+<kw name="Click on TagField" library="post_data_element_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${POST_DATA_TAG_FIELD}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:19.674" endtime="20180919 15:27:20.026"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:20.027" level="INFO">Clicking element '//div[@class='fuzzy-search']/div[@class='search-box']/input[@type='text']'.</msg>
+<status status="PASS" starttime="20180919 15:27:20.026" endtime="20180919 15:27:20.307"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:19.673" endtime="20180919 15:27:20.307"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:19.673" endtime="20180919 15:27:20.308"></status>
+</kw>
+<kw name="Sent Text to TagField" library="post_data_element_page">
+<arguments>
+<arg>${tag}</arg>
+</arguments>
+<kw name="Type On Input Field" library="base_page">
+<arguments>
+<arg>${POST_DATA_TAG_FIELD}</arg>
+<arg>${tag}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:20.310" endtime="20180919 15:27:20.646"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:20.646" endtime="20180919 15:27:20.894"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>${value_text}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:20.895" level="INFO">Typing text 'Hair Accesories' into text field '//div[@class='fuzzy-search']/div[@class='search-box']/input[@type='text']'.</msg>
+<status status="PASS" starttime="20180919 15:27:20.894" endtime="20180919 15:27:21.403"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:20.309" endtime="20180919 15:27:21.403"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:20.308" endtime="20180919 15:27:21.404"></status>
+</kw>
+<kw name="Click on Tag Result" library="post_data_element_page">
+<kw name="Click On Element" library="base_page">
+<arguments>
+<arg>${POST_DATA_TAG_RESULT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20180919 15:27:21.406" endtime="20180919 15:27:21.782"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20180919 15:27:21.783" level="INFO">Clicking element 'xpath=//div[@class='fuzzy-search']/div[@class='search-results']/div[@class='result-item']'.</msg>
+<status status="PASS" starttime="20180919 15:27:21.782" endtime="20180919 15:27:22.060"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:21.405" endtime="20180919 15:27:22.060"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:21.404" endtime="20180919 15:27:22.060"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:19.672" endtime="20180919 15:27:22.060"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:13.563" endtime="20180919 15:27:22.060"></status>
+</kw>
+<kw name="Set All Data to Chapter Element">
+<kw name="Set Title" library="chapter_lib">
+<assign>
+<var>${ChapterTitle}</var>
+</assign>
+<msg timestamp="20180919 15:27:22.061" level="INFO">${ChapterTitle} = Example of autoamted Title</msg>
+<status status="PASS" starttime="20180919 15:27:22.061" endtime="20180919 15:27:22.061"></status>
+</kw>
+<kw name="Set SubTitle" library="chapter_lib">
+<assign>
+<var>${ChapterSubTitle}</var>
+</assign>
+<msg timestamp="20180919 15:27:22.062" level="INFO">${ChapterSubTitle} = Example of description</msg>
+<status status="PASS" starttime="20180919 15:27:22.062" endtime="20180919 15:27:22.062"></status>
+</kw>
+<kw name="Set Abreviation Url" library="chapter_lib">
+<assign>
+<var>${ChapterAbreviationUrl}</var>
+</assign>
+<msg timestamp="20180919 15:27:22.062" level="INFO">${ChapterAbreviationUrl} = exampleurlabbreviation</msg>
+<status status="PASS" starttime="20180919 15:27:22.062" endtime="20180919 15:27:22.062"></status>
+</kw>
+<kw name="Set Path Table Contents" library="chapter_lib">
+<assign>
+<var>${ChapterTablePath}</var>
+</assign>
+<msg timestamp="20180919 15:27:22.062" level="INFO">${ChapterTablePath} = C:\Users\jesquivel-as\IdeaProjects\Example_of_automatimate\src\assets\375578.jpg</msg>
+<status status="PASS" starttime="20180919 15:27:22.062" endtime="20180919 15:27:22.063"></status>
+</kw>
+<kw name="Set Path Background" library="chapter_lib">
+<assign>
+<var>${ChapterBackgroundPath}</var>
+</assign>
+<msg timestamp="20180919 15:27:22.063" level="INFO">${ChapterBackgroundPath} = C:\Users\jesquivel-as\IdeaProjects\Example_of_automatimate\src\main\resources\612032.jpg</msg>
+<status status="PASS" starttime="20180919 15:27:22.063" endtime="20180919 15:27:22.063"></status>
+</kw>
+<kw name="Set Path Overlay" library="chapter_lib">
+<assign>
+<var>${ChapterOverlayPath}</var>
+</assign>
+<msg timestamp="20180919 15:27:22.063" level="INFO">${ChapterOverlayPath} = C:\Users\jesquivel-as\IdeaProjects\Example_of_automatimate\src\main\resources\27109.jpg</msg>
+<status status="PASS" starttime="20180919 15:27:22.063" endtime="20180919 15:27:22.063"></status>
+</kw>
+<status status="PASS" starttime="20180919 15:27:22.061" endtime="20180919 15:27:22.063"></status>
+</kw>
+<kw name="Complete info on chapter Element" library="Chapter_element_page">
+<arguments>
+<arg>${ChapterTitle}</arg>
+<arg>${ChapterSubTitle}</arg>
+<arg>${ChapterAbreviationUrl}</arg>
+<arg>${ChapterTablePath}</arg>
+<arg>${ChapterBackgroundPath}</arg>
+<arg>${chapteroverlaypath}</arg>
+</arguments>
+<kw name="Set Info to Chapter Title" library="Chapter_element_page">
+<arguments>
+<arg>${title_text}</arg>
+</arguments>
+<kw name="Type On Input Field" library="base_page">
+<arguments>
+<arg>${CHAPTER_TITLE}</arg>
+<arg>${title_text}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_field}</arg>
+<arg>timeout=${TIME_OUT}</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180918 17:22:57.604" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20180918 17:22:56.385" endtime="20180918 17:22:57.605"></status>
+<msg timestamp="20180919 15:27:37.602" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180919 15:27:37.236" endtime="20180919 15:27:37.603"></status>
 </kw>
-<msg timestamp="20180918 17:22:57.607" level="FAIL">Element with locator 'xpath=//input[@name='password']' not found.</msg>
-<status status="FAIL" starttime="20180918 17:22:40.806" endtime="20180918 17:22:57.607"></status>
+<msg timestamp="20180919 15:27:37.604" level="FAIL">Element with locator '' not found.</msg>
+<status status="FAIL" starttime="20180919 15:27:22.065" endtime="20180919 15:27:37.604"></status>
 </kw>
-<status status="FAIL" starttime="20180918 17:22:40.805" endtime="20180918 17:22:57.607"></status>
+<status status="FAIL" starttime="20180919 15:27:22.065" endtime="20180919 15:27:37.604"></status>
 </kw>
-<status status="FAIL" starttime="20180918 17:22:40.804" endtime="20180918 17:22:57.608"></status>
+<status status="FAIL" starttime="20180919 15:27:22.065" endtime="20180919 15:27:37.604"></status>
 </kw>
-<status status="FAIL" starttime="20180918 17:22:26.035" endtime="20180918 17:22:57.608"></status>
+<status status="FAIL" starttime="20180919 15:27:22.064" endtime="20180919 15:27:37.604"></status>
 </kw>
-<status status="FAIL" starttime="20180918 17:22:20.756" endtime="20180918 17:22:57.608" critical="yes">Element with locator 'xpath=//input[@name='password']' not found.</status>
+<status status="FAIL" starttime="20180919 15:26:58.275" endtime="20180919 15:27:37.605" critical="yes">Element with locator '' not found.</status>
 </test>
-<status status="FAIL" starttime="20180918 17:22:20.409" endtime="20180918 17:22:57.610"></status>
+<status status="FAIL" starttime="20180919 15:26:58.081" endtime="20180919 15:27:37.607"></status>
 </suite>
 <statistics>
 <total>
