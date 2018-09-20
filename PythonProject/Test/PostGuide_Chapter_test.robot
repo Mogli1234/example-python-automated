@@ -41,7 +41,7 @@ Log in and Create Guide Article
     Set All Post Data Elements
     Add Info to Post Data element  ${TITLE_GLOBAL}  ${DESCRIPTION_GLOBAL}  ${PATHIMAGE_GLOBAL}  ${TAG_GLOBAL}
     Set All Data to Chapter Element
-    Complete info on chapter Element  ${ChapterTitle}  ${ChapterSubTitle}  ${ChapterAbreviationUrl}  ${ChapterTablePath}  ${ChapterBackgroundPath}  ${chapteroverlaypath}
+    Complete info on chapter Element  ${CHAPTER_TITLE_GLOBAL}  ${CHAPTER_SUB_TITLE_GLOBAL}  ${CHAPTER_ABREVIATION_URL}  ${CHAPTER_TABLE_PATH_GLOBAL}  ${CHAPTER_BRACKGROUND_GLOBAL}  ${CHAPTER_OVERLAY_GLOBAL}
 
 
 *** Keywords ***
@@ -55,11 +55,13 @@ Set All Post Data Elements
     set suite variable  ${PATHIMAGE_GLOBAL}  ${PostDataImagePath}
     ${PostDataTag}  Set Tag
     set suite variable  ${TAG_GLOBAL}  ${PostDataTag}
+
 #*****Method to set all the elements for chapter******
 Set All Data to Chapter Element
     ${ChapterTitle}  Set Title
     set suite variable  ${CHAPTER_TITLE_GLOBAL}  ${ChapterTitle}
     ${ChapterSubTitle}  Set SubTitle
+
     set suite variable  ${CHAPTER_SUB_TITLE_GLOBAL}  ${ChapterSubTitle}
     ${ChapterAbreviationUrl}  Set Abreviation Url
     set suite variable  ${CHAPTER_ABREVIATION_URL}  ${ChapterAbreviationUrl}
