@@ -4,6 +4,7 @@ Resource   ../Pages/login_page.robot
 Resource   ../Pages/editor_page.robot
 Resource   ../Pages/post_data_element_page.robot
 Resource   ../Pages/Chapter_element_page.robot
+Resource   ../Pages/publish_accordion_page.robot
 Library    Selenium2Library
 Library     ../libraries/login_lib.py
 Library     ../libraries/chapter_lib.py
@@ -21,7 +22,7 @@ ${PostDataTitle}
 ${PostDataDescription}
 ${PostDataImagePath}
 ${PostDataTag}
-
+${PostDataSlug}
 #********Chapter Elements******
 ${ChapterTitle}
 ${ChapterSubTitle}
@@ -39,16 +40,18 @@ Log in and Create Guide Article
     Login Method  ${EMAIL}  ${PASSWORD}
     Create Guide Element
     Set All Post Data Elements
-    Add Info to Post Data element  ${TITLE_GLOBAL}  ${DESCRIPTION_GLOBAL}  ${PATHIMAGE_GLOBAL}  ${TAG_GLOBAL}
+    Add Info to Post Data element  ${TITLE_GLOBAL}  ${DESCRIPTION_GLOBAL}  ${PATHIMAGE_GLOBAL}  ${TAG_GLOBAL}  ${SLUG_GLOBAL}
     Set All Data to Chapter Element
     Complete info on chapter Element  ${CHAPTER_TITLE_GLOBAL}  ${CHAPTER_SUB_TITLE_GLOBAL}  ${CHAPTER_ABREVIATION_URL}  ${CHAPTER_TABLE_PATH_GLOBAL}  ${CHAPTER_BRACKGROUND_GLOBAL}  ${CHAPTER_OVERLAY_GLOBAL}
-
+    Publish new Article
 
 *** Keywords ***
 #****Set Methods for Post Data element******
 Set All Post Data Elements
     ${PostDataTitle}  Set Title PostData
     set suite variable  ${TITLE_GLOBAL}  ${PostDataTitle}
+    ${PostDataSlug}  Set Slug
+    set suite variable  ${SLUG_GLOBAL}  ${PostDataSlug}
     ${PostDataDescription}  Set Description PostData
     set suite variable  ${DESCRIPTION_GLOBAL}  ${PostDataDescription}
     ${PostDataImagePath}  Set Path Upload Image
