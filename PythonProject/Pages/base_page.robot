@@ -9,7 +9,7 @@ ${TIME_OUT}  15s
 *** Keywords ***
 Go to Platform
     Open Browser  ${APP_URL}  ${BROWSER}
-    Set Selenium Speed   0.9
+    Set Selenium Speed   0.1
 
 #************Method to click on element******************
 Click On Element
@@ -24,4 +24,8 @@ Type On Input Field
     Clear Element Text  ${input_field}
     Input Text  ${input_field}  ${value_text}
 
+Type On Input Image
+    [Arguments]  ${input_field}  ${path}
+    Wait Until Element is Enabled  ${input_field}  timeout=${TIME_OUT}
+    Choose File  ${input_field}  ${path}
 

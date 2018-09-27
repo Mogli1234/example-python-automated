@@ -2,7 +2,7 @@
 Resource  base_page.robot
 
 *** Variables ***
-${GUIDE_ELEMENT}  xpath=//div[@class='post-format-type' and @data-post-module='2']
+${GUIDE_ELEMENT}  xpath=//div[@class='format-type' and @data-format-module='2']
 
 *** Keywords ***
 Create Guide Element

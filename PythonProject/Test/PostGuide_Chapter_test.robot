@@ -1,28 +1,11 @@
 *** Settings ***
-Resource   ../Pages/base_page.robot
-Resource   ../Pages/login_page.robot
-Resource   ../Pages/editor_page.robot
-Resource   ../Pages/post_data_element_page.robot
 Resource   ../Pages/Chapter_element_page.robot
 Resource   ../Pages/publish_accordion_page.robot
 Library    Selenium2Library
 Library     ../libraries/login_lib.py
 Library     ../libraries/chapter_lib.py
-Library     ../libraries/postdata_lib.py
-
-Test Setup  Go to Platform
 
 *** Variables ***
-#****Login Variables*******
-${EMAIL}
-${PASSWORD}
-
-#*******PostData element*****
-${PostDataTitle}
-${PostDataDescription}
-${PostDataImagePath}
-${PostDataTag}
-${PostDataSlug}
 #********Chapter Elements******
 ${ChapterTitle}
 ${ChapterSubTitle}
@@ -31,33 +14,13 @@ ${ChapterBackgroundPath}
 ${ChapterTablePath}
 ${ChapterOverlayPath}
 
-#*****Test Case to Create a new Info Guide post Type with a chapter element*******
 *** Test Cases ***
-Log in and Create Guide Article
-    #***Set Email and Password
-    ${EMAIL}  Get email
-    ${PASSWORD}  Get Password
-    Login Method  ${EMAIL}  ${PASSWORD}
-    Create Guide Element
-    Set All Post Data Elements
-    Add Info to Post Data element  ${TITLE_GLOBAL}  ${DESCRIPTION_GLOBAL}  ${PATHIMAGE_GLOBAL}  ${TAG_GLOBAL}  ${SLUG_GLOBAL}
+#*****Method to add all the information to the chapter element
+Set info to Chapter Element
     Set All Data to Chapter Element
     Complete info on chapter Element  ${CHAPTER_TITLE_GLOBAL}  ${CHAPTER_SUB_TITLE_GLOBAL}  ${CHAPTER_ABREVIATION_URL}  ${CHAPTER_TABLE_PATH_GLOBAL}  ${CHAPTER_BRACKGROUND_GLOBAL}  ${CHAPTER_OVERLAY_GLOBAL}
-    Publish new Article
 
 *** Keywords ***
-#****Set Methods for Post Data element******
-Set All Post Data Elements
-    ${PostDataTitle}  Set Title PostData
-    set suite variable  ${TITLE_GLOBAL}  ${PostDataTitle}
-    ${PostDataSlug}  Set Slug
-    set suite variable  ${SLUG_GLOBAL}  ${PostDataSlug}
-    ${PostDataDescription}  Set Description PostData
-    set suite variable  ${DESCRIPTION_GLOBAL}  ${PostDataDescription}
-    ${PostDataImagePath}  Set Path Upload Image
-    set suite variable  ${PATHIMAGE_GLOBAL}  ${PostDataImagePath}
-    ${PostDataTag}  Set Tag
-    set suite variable  ${TAG_GLOBAL}  ${PostDataTag}
 
 #*****Method to set all the elements for chapter******
 Set All Data to Chapter Element
@@ -75,8 +38,4 @@ Set All Data to Chapter Element
     ${ChapterOverlayPath}  Set Path Overlay
     set suite variable  ${CHAPTER_OVERLAY_GLOBAL}  ${ChapterOverlayPath}
 
-#*******Method set Email and password******
-Set Email and Password
-    ${EMAIL}  Get email
-    ${PASSWORD}  Get Password
 
